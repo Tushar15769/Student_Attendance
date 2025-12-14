@@ -1,10 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <title>Faculty Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <script src="js/api.js"></script>
-<script src="js/student.js"></script> 
+  <div class="dashboard">
+    <h2>Welcome, Faculty</h2>
+
+    <label for="subject">Select Subject:</label>
+    <select id="subject">
+      <option value="Math">Math</option>
+      <option value="Physics">Physics</option>
+      <option value="Chemistry">Chemistry</option>
+    </select>
+
+    <h3>Class Attendance</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Student ID</th>
+          <th>Attendance %</th>
+        </tr>
+      </thead>
+      <tbody id="classTable"></tbody>
+    </table>
+
+    <h3>Defaulters</h3>
+    <ul id="defaulters"></ul>
+
+    <h3>Class Attendance Chart</h3>
+    <canvas id="classChart"></canvas>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/faculty.js"></script>
 </body>
 </html>
