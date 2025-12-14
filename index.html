@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Attendance Login</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="login-container">
+    <h2>Welcome Back 👋</h2>
+    <p class="subtitle">Log in to track your attendance</p>
+    <form id="loginForm">
+      <label for="role">I am a:</label>
+      <select id="role">
+        <option value="student">Student</option>
+        <option value="faculty">Faculty</option>
+      </select>
+
+      <label for="userId">Your ID:</label>
+      <input id="userId" placeholder="Enter your ID" required>
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
