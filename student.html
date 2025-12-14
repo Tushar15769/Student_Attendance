@@ -1,10 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8">
+  <title>Student Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for graphs -->
 </head>
 <body>
-    <script src="js/api.js"></script>
-<script src="js/student.js"></script>
+  <div class="dashboard">
+    <h2>Welcome, Student</h2>
+
+    <!-- Cards -->
+    <div class="cards">
+      <div class="card">
+        <h3 id="percent">0%</h3>
+        <p>Attendance Percentage</p>
+      </div>
+      <div class="card">
+        <h3 id="present">0</h3>
+        <p>Classes Attended</p>
+      </div>
+      <div class="card">
+        <h3 id="total">0</h3>
+        <p>Total Classes</p>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <h3>Recent Attendance</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Subject</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="records"></tbody>
+    </table>
+
+    <!-- Chart -->
+    <h3>Attendance Trend</h3>
+    <canvas id="attChart"></canvas>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/student.js"></script>
 </body>
 </html>
